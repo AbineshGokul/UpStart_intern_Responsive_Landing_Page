@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-label="Filter coffee and coffee beans">
+  <rect width="600" height="450" rx="16" fill="#f0e6d8"/>
+  <!-- steam -->
+  <path d="M250 150 q-20 -30 0 -60 q20 -30 0 -60" fill="none" stroke="#c8702a" stroke-width="6" stroke-linecap="round" opacity="0.6"/>
+  <path d="M300 150 q-20 -30 0 -60 q20 -30 0 -60" fill="none" stroke="#c8702a" stroke-width="6" stroke-linecap="round" opacity="0.6"/>
+  <path d="M350 150 q-20 -30 0 -60 q20 -30 0 -60" fill="none" stroke="#c8702a" stroke-width="6" stroke-linecap="round" opacity="0.6"/>
+  <!-- saucer -->
+  <ellipse cx="300" cy="360" rx="190" ry="32" fill="#6f4326"/>
+  <!-- cup -->
+  <path d="M180 190 h240 v90 a120 90 0 0 1 -240 0 z" fill="#fff"/>
+  <path d="M420 215 h30 a35 35 0 0 1 0 70 h-45" fill="none" stroke="#fff" stroke-width="16"/>
+  <ellipse cx="300" cy="190" rx="120" ry="22" fill="#3b2418"/>
+  <!-- beans -->
+  <g fill="#3b2418">
+    <ellipse cx="90" cy="380" rx="24" ry="15" transform="rotate(-25 90 380)"/>
+    <ellipse cx="130" cy="405" rx="24" ry="15" transform="rotate(15 130 405)"/>
+    <ellipse cx="510" cy="390" rx="24" ry="15" transform="rotate(20 510 390)"/>
+  </g>
+  <g stroke="#f0e6d8" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M72 388 q18 -10 36 -16"/>
+    <path d="M114 398 q18 6 36 14"/>
+    <path d="M492 383 q18 6 36 14"/>
+  </g>
+</svg>

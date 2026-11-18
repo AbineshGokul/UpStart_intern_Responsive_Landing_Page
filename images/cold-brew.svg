@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Iced cold brew glass">
+  <rect width="400" height="300" fill="#faf5ee"/>
+  <!-- glass -->
+  <path d="M145 50 h110 l-14 215 h-82 z" fill="#e8f1f5" opacity="0.8" stroke="#b9c9d0" stroke-width="4"/>
+  <!-- coffee -->
+  <path d="M153 100 h94 l-11 160 h-72 z" fill="#3b2418"/>
+  <!-- ice -->
+  <g fill="#fff" opacity="0.75">
+    <rect x="165" y="105" width="32" height="32" rx="5" transform="rotate(-10 181 121)"/>
+    <rect x="205" y="120" width="30" height="30" rx="5" transform="rotate(12 220 135)"/>
+    <rect x="175" y="155" width="30" height="30" rx="5" transform="rotate(8 190 170)"/>
+  </g>
+  <!-- straw -->
+  <path d="M225 30 L215 150" stroke="#c8702a" stroke-width="10" stroke-linecap="round"/>
+</svg>

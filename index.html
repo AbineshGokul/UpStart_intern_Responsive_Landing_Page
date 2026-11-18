@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kaveri Coffee Roasters | Small-batch South Indian coffee</title>
+  <meta name="description" content="Small-batch coffee roasted in Thanjavur and delivered fresh across India.">
+  <script>
+    /* Runs before first paint: avoids theme flash and enables animation styles */
+    document.documentElement.classList.add('js');
+    try {
+      var t = localStorage.getItem('theme') ||
+        (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="#top" class="logo"><span aria-hidden="true">☕</span> Kaveri Coffee</a>
+
+      <nav id="nav" class="nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="#menu">Coffees</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+        <button class="icon-btn cart-btn" aria-label="Shopping bag">
+          🛍️<span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="icon-btn burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="blob blob-1" aria-hidden="true"></div>
+      <div class="blob blob-2" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow reveal">Roasted in Thanjavur</p>
+          <h1 class="reveal">Fresh South Indian coffee, <span class="gradient-text">roasted to order.</span></h1>
+          <p class="lead reveal">
+            We buy beans straight from small estates in Coorg and Chikmagalur,
+            roast them every Monday and Thursday, and ship them to your door within 48 hours.
+          </p>
+          <div class="hero-cta reveal">
+            <a href="#menu" class="btn">Shop coffees</a>
+            <a href="#about" class="btn btn-ghost">Our story</a>
+          </div>
+        </div>
+        <div class="hero-visual reveal">
+          <img class="float" src="images/hero.svg"
+               alt="A steaming cup of filter coffee next to roasted beans"
+               width="600" height="450">
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats" aria-label="Our numbers">
+      <div class="container stats-grid">
+        <div class="stat reveal"><strong data-target="14" data-suffix=" days">0</strong><span>max bean age when shipped</span></div>
+        <div class="stat reveal"><strong data-target="6">0</strong><span>partner estates</span></div>
+        <div class="stat reveal"><strong data-target="48" data-suffix=" h">0</strong><span>roaster to doorstep</span></div>
+        <div class="stat reveal"><strong data-target="2500" data-suffix="+">0</strong><span>happy customers</span></div>
+      </div>
+    </section>
+
+    <!-- Coffees -->
+    <section id="menu" class="section">
+      <div class="container">
+        <h2 class="reveal">Our coffees</h2>
+        <p class="section-intro reveal">Three roasts, each made for a different way of brewing.</p>
+
+        <div class="filters reveal" role="group" aria-label="Filter coffees">
+          <button class="chip active" data-filter="all">All</button>
+          <button class="chip" data-filter="hot">Hot</button>
+          <button class="chip" data-filter="cold">Cold</button>
+        </div>
+
+        <div class="cards" id="cards">
+          <article class="card reveal" data-category="hot">
+            <div class="card-img"><img src="images/filter-coffee.svg" alt="Cup of South Indian filter coffee" width="400" height="300" loading="lazy"></div>
+            <span class="tag">Bestseller</span>
+            <h3>Classic Filter Blend</h3>
+            <p>Medium roast with 20% chicory. Made for the traditional steel tumbler and davara. Smooth, strong and comforting.</p>
+            <div class="card-foot">
+              <span class="price">₹350 <small>/ 250 g</small></span>
+              <button class="btn btn-small add" data-name="Classic Filter Blend">Add to bag</button>
+            </div>
+          </article>
+
+          <article class="card reveal" data-category="hot">
+            <div class="card-img"><img src="images/espresso.svg" alt="Small cup of espresso" width="400" height="300" loading="lazy"></div>
+            <span class="tag">Dark roast</span>
+            <h3>Estate Espresso</h3>
+            <p>100% Arabica from Chikmagalur. Notes of dark chocolate and roasted almond with a thick crema.</p>
+            <div class="card-foot">
+              <span class="price">₹450 <small>/ 250 g</small></span>
+              <button class="btn btn-small add" data-name="Estate Espresso">Add to bag</button>
+            </div>
+          </article>
+
+          <article class="card reveal" data-category="cold">
+            <div class="card-img"><img src="images/cold-brew.svg" alt="Tall glass of iced cold brew coffee" width="400" height="300" loading="lazy"></div>
+            <span class="tag">Light roast</span>
+            <h3>Cold Brew Grind</h3>
+            <p>Coarse-ground light roast from Coorg. Steep 12 hours in cold water for a sweet, low-acid summer drink.</p>
+            <div class="card-foot">
+              <span class="price">₹400 <small>/ 250 g</small></span>
+              <button class="btn btn-small add" data-name="Cold Brew Grind">Add to bag</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section section-alt">
+      <div class="container about-grid">
+        <div class="reveal">
+          <h2>Why we roast small</h2>
+          <p>Coffee tastes best within a few weeks of roasting. Big brands can't promise that, but we can. Every bag is stamped with its roast date, and we never sell beans older than 14 days.</p>
+          <p>We pay estate partners above the market rate and print their names on every label, so you always know where your coffee came from.</p>
+        </div>
+        <ol class="steps">
+          <li class="reveal"><b>1</b><div><h3>Sourced</h3><p>Handpicked from shade-grown estates.</p></div></li>
+          <li class="reveal"><b>2</b><div><h3>Roasted</h3><p>Small batches, twice a week.</p></div></li>
+          <li class="reveal"><b>3</b><div><h3>Delivered</h3><p>At your door within 48 hours.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews" class="section">
+      <div class="container">
+        <h2 class="reveal">What customers say</h2>
+        <div class="reviews">
+          <blockquote class="review reveal">
+            <p>“Tastes exactly like the filter coffee my grandmother made. The roast date on the bag is a lovely touch.”</p>
+            <footer>Meenakshi R., Chennai ★★★★★</footer>
+          </blockquote>
+          <blockquote class="review reveal">
+            <p>“The espresso blend gives a proper crema on my home machine. Arrived in two days.”</p>
+            <footer>Arjun K., Bengaluru ★★★★★</footer>
+          </blockquote>
+          <blockquote class="review reveal">
+            <p>“Cold brew grind is perfect. Smooth, not bitter, and I finally stopped buying cafe coffee.”</p>
+            <footer>Divya S., Hyderabad ★★★★☆</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact / Newsletter -->
+    <section id="contact" class="section section-alt">
+      <div class="container contact reveal">
+        <h2>Get 10% off your first bag</h2>
+        <p>Join our list for roast-day alerts and brewing tips. No spam, unsubscribe any time.</p>
+        <form id="newsletter" class="newsletter" novalidate>
+          <label for="email" class="sr-only">Email address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+          <button type="submit" class="btn">Subscribe</button>
+        </form>
+        <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
+        <p class="small">Thanjavur, Tamil Nadu · Open Mon–Sat, 9 am to 6 pm</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Kaveri Coffee Roasters. A demo project for a web design course.</p>
+      <ul class="nav-list">
+        <li><a href="#menu">Coffees</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
